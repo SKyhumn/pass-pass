@@ -27,6 +27,8 @@ export default function LoginCard({ onError }: Props) {
 
     const goSignUpPage = () => nav('/sign-up');
 
+    const goForEmailVerify = () => nav('/email-verify');
+
     const handleSignIn = async() => {
         try {
             setLoading(true);
@@ -78,6 +80,10 @@ export default function LoginCard({ onError }: Props) {
                 onChange={(e) => setPassword(e.target.value)}
                 disabled={loading}
             />
+
+            <p onClick={goForEmailVerify} className="text-gray-400 text-xs text-right cursor-pointer hover:text-black hover:underline">
+                비밀번호를 잊으셨나요?
+            </p>
 
             {/* 버튼 */}
             <Button 

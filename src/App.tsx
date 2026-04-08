@@ -3,7 +3,10 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import SignInPage from "./pages/AuthPage/SignInPage";
 import SignUpPage from "./pages/AuthPage/SignUpPage";
+import EmailVerify from "./pages/AuthPage/EmailVerify";
 import MainPage from "./pages/MainPage";
+
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
@@ -14,7 +17,15 @@ function App() {
           <Route path="/welcome" element={<LandingPage/>}/>
           <Route path="/sign-in" element={<SignInPage/>}/>
           <Route path="/sign-up" element={<SignUpPage/>}/>
-          <Route path="/main" element={<MainPage/>}/>
+          <Route path="/email-verify" element={<EmailVerify/>}/>
+          <Route 
+            path="/main" 
+            element={
+              <ProtectedRoute>
+                <MainPage />
+              </ProtectedRoute>
+            } 
+          />
         </Routes>
       </BrowserRouter>
     </>
