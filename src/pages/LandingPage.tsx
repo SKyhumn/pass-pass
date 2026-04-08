@@ -1,4 +1,4 @@
-import AuthButtons from "../components/Auth.tsx/AuthButtons";
+import SelectionButtons from "../components/Auth.tsx/SelectionButtons";
 import FeatureGrid from "../components/Features.tsx/FeatureGrid";
 
 import logo from "../assets/pass-pass-logo.png";
@@ -16,7 +16,7 @@ export default function LandingPage() {
             </p>
 
             {/* 로그인 / 회원가입 버튼 */}
-            <AuthButtons/>
+            <SelectionButtons/>
 
             {/* 기능 카드 영역 */}
             <FeatureGrid/>

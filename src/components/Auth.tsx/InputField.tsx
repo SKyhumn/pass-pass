@@ -8,9 +8,12 @@ type Props = {
   type: string;
   placeholder: string;
   icon: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  disabled?: boolean;
 };
 
-export default function InputField({ label, type, placeholder, icon }: Props) {
+export default function InputField({ label, type, placeholder, icon, value, onChange, disabled }: Props) {
     const [showPassword, setShowPassword] = useState<boolean>(false);
 
     const isPassword = type === "password";
@@ -29,7 +32,12 @@ export default function InputField({ label, type, placeholder, icon }: Props) {
                 <input
                 type={isPassword && showPassword ? "text" : type}
                 placeholder={placeholder}
-                className="bg-transparent outline-none w-full text-sm"
+                value={value}
+                onChange={onChange}
+                className={`bg-transparent outline-none w-full text-sm
+                    ${disabled ? "text-gray-400 cursor-not-allowed" : ""}
+                `}
+                disabled={disabled}
                 />
 
                 {/* 👁️ 비밀번호 토글 */}
