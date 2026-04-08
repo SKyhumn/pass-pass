@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import SignInPage from "./pages/AuthPage/SignInPage";
-
 import LandingPage from "./pages/LandingPage";
+import SignInPage from "./pages/AuthPage/SignInPage";
+import SignUpPage from "./pages/AuthPage/SignUpPage";
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
           <Route path="/" element={<Navigate to="/welcome" replace/>}/>
           <Route path="/welcome" element={<LandingPage/>}/>
           <Route path="/sign-in" element={<SignInPage/>}/>
+          <Route path="/sign-up" element={<SignUpPage/>}/>
         </Routes>
       </BrowserRouter>
     </>

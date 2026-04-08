@@ -1,9 +1,15 @@
+import { useNavigate } from "react-router-dom";
+
 import InputField from "./InputField";
 
 import email from "../../assets/email.png";
 import password from "../../assets/password.png"
 
 export default function LoginCard() {
+    const nav = useNavigate();
+
+    const goSignUpPage = () => nav('/sign-up');
+
     return(
         <div className="opacity-0 w-full max-w-md bg-white rounded-2xl shadow-md p-6 space-y-5 animate-fadein" style={{ animationDelay: "0.1s" }}>
 
@@ -28,7 +34,7 @@ export default function LoginCard() {
 
             <p className="text-center text-sm text-gray-500">
                 계정이 없으신가요?{" "}
-                <span className="text-blue-400 cursor-pointer hover:underline">
+                <span onClick={goSignUpPage} className="text-blue-400 cursor-pointer hover:underline">
                     회원가입
                 </span>
             </p>
