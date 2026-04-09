@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { auth } from "../../FirebaseSDK";
+import { auth, db } from "../../FirebaseSDK";
 import { onAuthStateChanged, signOut } from "firebase/auth";
+import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 
 import type { User } from "firebase/auth";
+import type { ScheduleItem } from "../../types/ScheduleItem";
 
 import WelcomeCard from "../../components/Home/WelcomeCard";
 import ProgressCard from "../../components/Home/ProgressCard";
@@ -15,17 +17,42 @@ import Modal from "../../components/Modals/Modal";
 
 export default function MainPage() {
     const [user, setUser] = useState<User | null>(null);
+    const [schedules, setSchedules] = useState<ScheduleItem[]>([]);
 
     const [error, setError] = useState<boolean>(false);
 
     const nav = useNavigate();
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
+        let unsubscribeSchedules: (() => void) | undefined;
+
+        const unsubscribeAuth = onAuthStateChanged(auth, (user) => {
             setUser(user);
+
+            if (!user) {
+                setSchedules([]);
+                return;
+            }
+
+            const q = query(
+                collection(db, "users", user.uid, "schedules"),
+                orderBy("createdAt", "desc")
+            );
+
+            unsubscribeSchedules = onSnapshot(q, (snapshot) => {
+                const data: ScheduleItem[] = snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    ...(doc.data() as Omit<ScheduleItem, "id">),
+                }));
+
+                setSchedules(data);
+            });
         });
 
-        return () => unsubscribe();
+        return () => {
+            unsubscribeAuth();
+            if (unsubscribeSchedules) unsubscribeSchedules();
+        };
     }, []);
 
     const handleLogout = async () => {
@@ -45,9 +72,9 @@ export default function MainPage() {
                 userName={user?.displayName || "사용자"} 
                 onLogout={handleLogout}
             />
-            <ProgressCard />
+            <ProgressCard schedules={schedules}/>
             <QuickStartGrid />
-            <TodayTaskCard />
+            <TodayTaskCard schedules={schedules} />
 
             {error && 
                 <Modal

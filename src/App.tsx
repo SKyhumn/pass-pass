@@ -10,7 +10,7 @@ import MainPage from "./pages/ContentPage/HomePage";
 import NCSPage from "./pages/ContentPage/NCSPage";
 import CertificationPage from "./pages/ContentPage/CertificationPage";
 import CoverLetterPage from "./pages/ContentPage/CoverLetter";
-import SchedulePage from "./pages/ContentPage/Schedule";
+import SchedulePage from "./pages/ContentPage/SchedulePage";
 
 function App() {
   return (
