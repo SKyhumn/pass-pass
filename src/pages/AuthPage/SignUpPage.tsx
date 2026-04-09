@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import SignUpCard from "../../components/Auth.tsx/cards/SignUpCard";
-import Modal from "../../components/Modals/modal";
+import SignUpCard from "../../components/Auth/cards/SignUpCard";
+import Modal from "../../components/Modals/Modal";
 
 import signup from "../../assets/signup.png";
 

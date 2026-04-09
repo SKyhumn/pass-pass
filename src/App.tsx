@@ -4,9 +4,13 @@ import LandingPage from "./pages/LandingPage";
 import SignInPage from "./pages/AuthPage/SignInPage";
 import SignUpPage from "./pages/AuthPage/SignUpPage";
 import EmailVerify from "./pages/AuthPage/EmailVerify";
-import MainPage from "./pages/MainPage";
 
-import ProtectedRoute from "./components/ProtectedRoute";
+import MainLayout from "./pages/MainLayout";
+import MainPage from "./pages/ContentPage/HomePage";
+import NCSPage from "./pages/ContentPage/NCSPage";
+import CertificationPage from "./pages/ContentPage/CertificationPage";
+import CoverLetterPage from "./pages/ContentPage/CoverLetter";
+import SchedulePage from "./pages/ContentPage/Schedule";
 
 function App() {
   return (
@@ -18,14 +22,14 @@ function App() {
           <Route path="/sign-in" element={<SignInPage/>}/>
           <Route path="/sign-up" element={<SignUpPage/>}/>
           <Route path="/email-verify" element={<EmailVerify/>}/>
-          <Route 
-            path="/main" 
-            element={
-              <ProtectedRoute>
-                <MainPage />
-              </ProtectedRoute>
-            } 
-          />
+
+          <Route element={<MainLayout />}>
+            <Route path="/main" element={<MainPage/>}/>
+            <Route path="/study-ncs" element={<NCSPage/>}/>
+            <Route path="/study-certification" element={<CertificationPage/>}/>
+            <Route path="/check-coverletter" element={<CoverLetterPage/>}/>
+            <Route path="/make-schedule" element={<SchedulePage/>}/>
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

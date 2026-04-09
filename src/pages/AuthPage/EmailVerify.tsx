@@ -1,4 +1,4 @@
-import EmailVerifyCard from "../../components/Auth.tsx/cards/EmailVerifyCard";
+import EmailVerifyCard from "../../components/Auth/cards/EmailVerifyCard";
 
 import key from "../../assets/key.png";
 

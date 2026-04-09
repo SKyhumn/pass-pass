@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import eyeOpen from "../../assets/password show.png";
-import eyeClose from "../../assets/password no show.png";
+import eyeOpen from "../../assets/auth/password show.png";
+import eyeClose from "../../assets/auth/password no show.png";
 
 type Props = {
   label: string;

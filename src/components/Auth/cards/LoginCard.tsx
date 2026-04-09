@@ -7,8 +7,8 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import InputField from "../InputField";
 import Button from "../Button";
 
-import emailIcon from "../../../assets/email.png";
-import passwordIcon from "../../../assets/password.png";
+import emailIcon from "../../../assets/auth/email.png";
+import passwordIcon from "../../../assets/auth/password.png";
 
 type Props = {
   onError: (message: string) => void;

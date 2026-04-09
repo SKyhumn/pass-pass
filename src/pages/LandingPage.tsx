@@ -1,7 +1,7 @@
-import SelectionButtons from "../components/Auth.tsx/SelectionButtons";
-import FeatureGrid from "../components/Features.tsx/FeatureGrid";
+import SelectionButtons from "../components/Auth/SelectionButtons";
+import FeatureGrid from "../components/Features/FeatureGrid";
 
-import logo from "../assets/pass-pass-logo.png";
+import logo from "../assets/logo/pass-pass-logo.png";
 
 export default function LandingPage() {
     return(

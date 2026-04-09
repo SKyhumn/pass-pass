@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import LoginCard from "../../components/Auth.tsx/cards/LoginCard";
-import Modal from "../../components/Modals/modal";
+import LoginCard from "../../components/Auth/cards/LoginCard";
+import Modal from "../../components/Modals/Modal";
 
-import logo from "../../assets/pass-pass-logo.png";
+import logo from "../../assets/logo/pass-pass-logo.png";
 
 export default function SignInPage() {
   const [modalOpen, setModalOpen] = useState<boolean>(false);

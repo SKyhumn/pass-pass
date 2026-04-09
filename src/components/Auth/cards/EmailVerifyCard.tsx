@@ -5,7 +5,7 @@ import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import InputField from "../InputField";
 import Button from "../Button";
 
-import emailIcon from "../../../assets/email.png";
+import emailIcon from "../../../assets/auth/email.png";
 
 export default function EmailVerifyCard() {
     const nav = useNavigate();

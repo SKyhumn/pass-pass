@@ -1,9 +1,9 @@
 import FeatureCard from "./FeatureCard";
 
-import ncs from "../../assets/ncs.png";
-import certification from "../../assets/certification.png";
-import coverLetter from "../../assets/cover letter.png";
-import calendar from "../../assets/calendar.png";
+import ncs from "../../assets/feature/ncs.png";
+import certification from "../../assets/feature/certification.png";
+import coverLetter from "../../assets/feature/cover letter.png";
+import calendar from "../../assets/feature/calendar.png";
 
 export default function FeatureGrid() {
     return (
