@@ -9,7 +9,7 @@ import MainLayout from "./pages/MainLayout";
 import MainPage from "./pages/ContentPage/HomePage";
 import NCSPage from "./pages/ContentPage/NCSPage";
 import CertificationPage from "./pages/ContentPage/CertificationPage";
-import CoverLetterPage from "./pages/ContentPage/CoverLetter";
+import CoverLetterPage from "./pages/ContentPage/CoverLetterPage";
 import SchedulePage from "./pages/ContentPage/SchedulePage";
 
 function App() {

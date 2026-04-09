@@ -21,18 +21,20 @@ import ScheduleEmptyView from "../../components/Schedule/ScheduleEmptyView";
 import AddScheduleForm from "../../components/Schedule/AddScheduleForm";
 import ScheduleItemCard from "../../components/Schedule/ScheduleItemCard";
 import ScheduleSection from "../../components/Schedule/ScheduleSection";
+import Modal from "../../components/Modals/Modal";
 
 export default function SchedulePage() {
-  const [showForm, setShowForm] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [showForm, setShowForm] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
-  const [title, setTitle] = useState("");
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
-  const [description, setDescription] = useState("");
+  const [title, setTitle] = useState<string>("");
+  const [date, setDate] = useState<string>("");
+  const [time, setTime] = useState<string>("");
+  const [description, setDescription] = useState<string>("");
 
   const [schedules, setSchedules] = useState<ScheduleItem[]>([]);
-  const [authLoading, setAuthLoading] = useState(true);
+  const [authLoading, setAuthLoading] = useState<boolean>(true);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const resetForm = () => {
     setTitle("");
@@ -93,7 +95,7 @@ export default function SchedulePage() {
       resetForm();
       setShowForm(false);
     } catch (error) {
-      console.error("일정 추가 실패:", error);
+      setErrorMessage("일정 추가 중 오류가 발생했습니다.");
     } finally {
       setLoading(false);
     }
@@ -106,7 +108,7 @@ export default function SchedulePage() {
     try {
       await deleteDoc(doc(db, "users", user.uid, "schedules", scheduleId));
     } catch (error) {
-      console.error("일정 삭제 실패:", error);
+      setErrorMessage("일정 삭제 중 오류가 발생했습니다.");
     }
   };
 
@@ -122,7 +124,7 @@ export default function SchedulePage() {
         completed: !currentValue,
       });
     } catch (error) {
-      console.error("일정 완료 처리 실패:", error);
+      setErrorMessage("일정 완료 처리 중 오류가 발생했습니다.");
     }
   };
 
@@ -203,6 +205,13 @@ export default function SchedulePage() {
             )}
           </ScheduleSection>
         </div>
+      )}
+
+      {errorMessage && (
+        <Modal
+          message={errorMessage}
+          onClose={() => setErrorMessage(null)}
+        />
       )}
     </div>
   );
