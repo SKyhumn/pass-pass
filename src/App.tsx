@@ -9,7 +9,6 @@ import MainLayout from "./pages/MainLayout";
 import MainPage from "./pages/ContentPage/HomePage";
 import NCSPage from "./pages/ContentPage/NCSPage";
 import CertificationPage from "./pages/ContentPage/CertificationPage";
-import CoverLetterPage from "./pages/ContentPage/CoverLetterPage";
 import SchedulePage from "./pages/ContentPage/SchedulePage";
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
             <Route path="/main" element={<MainPage/>}/>
             <Route path="/study-ncs" element={<NCSPage/>}/>
             <Route path="/study-certification" element={<CertificationPage/>}/>
-            <Route path="/check-coverletter" element={<CoverLetterPage/>}/>
             <Route path="/make-schedule" element={<SchedulePage/>}/>
           </Route>
         </Routes>

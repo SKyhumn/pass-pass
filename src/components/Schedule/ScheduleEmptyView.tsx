@@ -11,10 +11,10 @@ export default function ScheduleEmptyView() {
         />
       </div>
 
-      <p className="text-2xl md:text-3xl font-medium text-slate-500">
+      <p className="text-2xl md:text-xl font-medium text-slate-500">
         등록된 일정이 없습니다
       </p>
-      <p className="mt-3 text-lg text-slate-400">
+      <p className="mt-3 text-md text-slate-400">
         새 일정을 추가해보세요!
       </p>
     </div>
