@@ -8,6 +8,7 @@ import type { ScheduleSummaryCardsProps } from "../../types/ScheduleSummaryCards
 export default function ScheduleSummaryCards({ inProgressCount, completedCount }: ScheduleSummaryCardsProps) {
   return (
     <div className="opacity-0 grid grid-cols-1 md:grid-cols-2 gap-4 animate-fadein">
+      
       <SummaryCard
         title="진행 중"
         count={inProgressCount}
