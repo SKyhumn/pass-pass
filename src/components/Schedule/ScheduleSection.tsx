@@ -1,11 +1,6 @@
-import type { ReactNode } from "react";
+import type { ScheduleSectionProps } from "../../types/ScheduleSectionProps";
 
-type Props = {
-  title: string;
-  children: ReactNode;
-};
-
-export default function ScheduleSection({ title, children }: Props) {
+export default function ScheduleSection({ title, children }: ScheduleSectionProps) {
   return (
     <section className="space-y-4 animate-fadein">
       <h2 className="text-2xl font-semibold text-slate-900">{title}</h2>

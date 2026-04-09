@@ -1,16 +1,4 @@
-type Props = {
-  title: string;
-  date: string;
-  time: string;
-  description: string;
-  onChangeTitle: (value: string) => void;
-  onChangeDate: (value: string) => void;
-  onChangeTime: (value: string) => void;
-  onChangeDescription: (value: string) => void;
-  onAdd?: () => void;
-  onCancel?: () => void;
-  loading?: boolean;
-};
+import type { AddScheduleFormProps } from "../../types/AddScheduleFormProps";
 
 export default function AddScheduleForm({
   title,
@@ -24,9 +12,9 @@ export default function AddScheduleForm({
   onAdd,
   onCancel,
   loading = false,
-}: Props) {
+}: AddScheduleFormProps) {
   return (
-    <div className="w-full rounded-[24px] border-2 border-[#78C5FF] bg-white px-6 py-8 shadow-sm">
+    <div className="w-full rounded-3xl border-2 border-[#78C5FF] bg-white px-6 py-8 shadow-sm">
       <h2 className="text-2xl font-semibold text-slate-900">새 일정 추가</h2>
 
       <div className="mt-8 space-y-6">
@@ -81,7 +69,7 @@ export default function AddScheduleForm({
             onChange={(e) => onChangeDescription(e.target.value)}
             placeholder="일정에 대한 설명을 입력하세요 (선택사항)"
             disabled={loading}
-            className="min-h-[140px] w-full resize-none rounded-2xl border border-slate-300 px-6 py-4 text-lg text-slate-800 outline-none placeholder:text-slate-400 focus:border-[#78C5FF] disabled:bg-slate-100"
+            className="min-h-35 w-full resize-none rounded-2xl border border-slate-300 px-6 py-4 text-lg text-slate-800 outline-none placeholder:text-slate-400 focus:border-[#78C5FF] disabled:bg-slate-100"
           />
         </div>
 

@@ -1,8 +1,6 @@
-type Props = {
-  onClick?: () => void;
-};
+import type { AddScheduleBtnProps } from "../../types/AddScheduleBtnProps";
 
-export default function AddScheduleBtn({ onClick }: Props) {
+export default function AddScheduleBtn({ onClick }: AddScheduleBtnProps) {
   return (
     <button
       onClick={onClick}

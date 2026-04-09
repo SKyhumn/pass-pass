@@ -4,17 +4,15 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../../../FirebaseSDK";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
+import type { LoginCardProps } from "../../../types/LoginCardProps";
+
 import InputField from "../InputField";
 import Button from "../Button";
 
 import emailIcon from "../../../assets/auth/email.png";
 import passwordIcon from "../../../assets/auth/password.png";
 
-type Props = {
-  onError: (message: string) => void;
-};
-
-export default function LoginCard({ onError }: Props) {
+export default function LoginCard({ onError }: LoginCardProps) {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
 

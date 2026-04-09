@@ -2,15 +2,7 @@ import calendar from "../../assets/nav-images/calendar-selected.png";
 import clock from "../../assets/schedule/clock.png";
 import trashCan from "../../assets/schedule/trash-can.png";
 
-type Props = {
-  title: string;
-  date: string;
-  time: string;
-  description?: string;
-  completed?: boolean;
-  onToggleComplete?: () => void;
-  onDelete?: () => void;
-};
+import type { ScheduleItemCardProps } from "../../types/ScheduleItemCardProps";
 
 export default function ScheduleItemCard({
   title,
@@ -20,9 +12,9 @@ export default function ScheduleItemCard({
   completed = false,
   onToggleComplete,
   onDelete,
-}: Props) {
+}: ScheduleItemCardProps) {
   return (
-    <div className="flex items-start justify-between rounded-[24px] border-2 border-[#78C5FF] bg-white px-6 py-6 shadow-sm">
+    <div className="flex items-start justify-between rounded-3xl border-2 border-[#78C5FF] bg-white px-6 py-6 shadow-sm">
       <div className="flex gap-4">
         <button
           onClick={onToggleComplete}

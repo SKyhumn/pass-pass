@@ -1,10 +1,4 @@
-type Props = {
-  title: string;
-  count: number;
-  icon: string;
-  accentColor: string;
-  iconBgClass: string;
-};
+import type { SummaryCardProps } from "../../types/SummaryCardProps";
 
 export default function SummaryCard({
   title,
@@ -12,7 +6,7 @@ export default function SummaryCard({
   icon,
   accentColor,
   iconBgClass,
-}: Props) {
+}: SummaryCardProps) {
   return (
     <div
       className="bg-white rounded-2xl shadow-sm px-6 py-5 border-l-4"

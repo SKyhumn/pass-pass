@@ -1,9 +1,5 @@
-type Props = {
-  message: string;
-  onClose: () => void;
-};
-
-export default function Modal({ message, onClose }: Props) {
+import type { ModalProps } from "../../types/ModalProps";
+export default function Modal({ message, onClose }: ModalProps) {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50">
 

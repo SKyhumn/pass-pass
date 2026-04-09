@@ -3,12 +3,9 @@ import SummaryCard from "./SummaryCard";
 import progressIcon from "../../assets/schedule/progressIcon.png";
 import completeIcon from "../../assets/schedule/completeIcon.png";
 
-type Props = {
-  inProgressCount: number;
-  completedCount: number;
-};
+import type { ScheduleSummaryCardsProps } from "../../types/ScheduleSummaryCardsProps";
 
-export default function ScheduleSummaryCards({ inProgressCount, completedCount }: Props) {
+export default function ScheduleSummaryCards({ inProgressCount, completedCount }: ScheduleSummaryCardsProps) {
   return (
     <div className="opacity-0 grid grid-cols-1 md:grid-cols-2 gap-4 animate-fadein">
       <SummaryCard

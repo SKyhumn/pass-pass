@@ -7,6 +7,8 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { db } from "../../../FirebaseSDK";
 import { doc, setDoc } from "firebase/firestore";
 
+import type { SignUpCardProps } from "../../../types/SignUpCardProps";
+
 import InputField from "../InputField";
 import Button from "../Button";
 import ErrorMessage from "../ErrorMessage";
@@ -15,11 +17,7 @@ import userIcon from "../../../assets/auth/user.png";
 import emailIcon from "../../../assets/auth/email.png";
 import passwordIcon from "../../../assets/auth/password.png";
 
-type Props = {
-    onError: (message: string) => void;
-};
-
-export default function SignUpCard({ onError }: Props) {
+export default function SignUpCard({ onError }: SignUpCardProps) {
     const [name, setName] = useState<string>("");
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");

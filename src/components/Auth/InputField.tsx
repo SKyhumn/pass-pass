@@ -1,19 +1,11 @@
 import { useState } from "react";
 
+import type { InputFieldProps } from "../../types/InputFieldProps";
+
 import eyeOpen from "../../assets/auth/password show.png";
 import eyeClose from "../../assets/auth/password no show.png";
 
-type Props = {
-  label: string;
-  type: string;
-  placeholder: string;
-  icon: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  disabled?: boolean;
-};
-
-export default function InputField({ label, type, placeholder, icon, value, onChange, disabled }: Props) {
+export default function InputField({ label, type, placeholder, icon, value, onChange, disabled }: InputFieldProps) {
     const [showPassword, setShowPassword] = useState<boolean>(false);
 
     const isPassword = type === "password";

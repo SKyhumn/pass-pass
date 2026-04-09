@@ -1,11 +1,6 @@
-type Props = {
-    icon: string;
-    title: string;
-    desc: string;
-    bgColor: string;
-};
+import type { FeatureCardProps } from "../../types/FeatureCardProps";
 
-export default function FeatureCard({ icon, title, desc, bgColor }: Props) {
+export default function FeatureCard({ icon, title, desc, bgColor }: FeatureCardProps) {
     return (
         <div className="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm">
         

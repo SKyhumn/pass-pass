@@ -1,11 +1,8 @@
+import type { WelcomeCardProps } from "../../types/WelcomeCardProps";
+
 import logout from "../../assets/logout.png";
 
-type Props = {
-    userName: string;
-    onLogout: () => void;
-};
-
-export default function WelcomeCard({ userName, onLogout }: Props) {
+export default function WelcomeCard({ userName, onLogout }: WelcomeCardProps) {
     return (
         <div className="opacity-0 flex items-center justify-between animate-fadein">
         

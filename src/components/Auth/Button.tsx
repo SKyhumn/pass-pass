@@ -1,11 +1,6 @@
-type Props = {
-    text: string;
-    onClick?: () => void;
-    disabled?: boolean;
-    loading?: boolean;
-}
+import type { ButtonProps } from "../../types/ButtonProps";
 
-export default function Button({ text, onClick, disabled = false, loading = false }: Props) {
+export default function Button({ text, onClick, disabled = false, loading = false }: ButtonProps) {
     const isDisabled = disabled || loading;
 
     return(

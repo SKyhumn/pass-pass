@@ -1,13 +1,8 @@
 import { useNavigate } from "react-router-dom";
 
-type Props = {
-  icon: string;
-  title: string;
-  bgColor: string;
-  path: string;
-};
+import type { QuickStartProps } from "../../types/QuickStartProps";
 
-export default function QuickStartItem({ icon, title, bgColor, path }: Props) {
+export default function QuickStartItem({ icon, title, bgColor, path }: QuickStartProps) {
     const nav = useNavigate();
 
     return (

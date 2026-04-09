@@ -1,13 +1,8 @@
 import { useLocation, useNavigate } from "react-router-dom";
 
-type Props = {
-  icon: string;
-  activeIcon: string;
-  label: string;
-  path: string;
-};
+import type { NavItemProps } from "../../types/NavItemProps";
 
-export default function NavItem({ icon, activeIcon, label, path }: Props) {
+export default function NavItem({ icon, activeIcon, label, path }: NavItemProps) {
   const location = useLocation();
   const navigate = useNavigate();
 
