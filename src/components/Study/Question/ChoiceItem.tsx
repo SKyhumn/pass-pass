@@ -1,4 +1,4 @@
-import type { ChoiceItemProps } from "../../types/ChoiceItemProps";
+import type { ChoiceItemProps } from "../../../types/ChoiceItemProps";
 
 export default function ChoiceItem({
   text,

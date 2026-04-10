@@ -6,29 +6,32 @@ import QuestionCard from "../../../components/Study/Question/QuestionCard";
 
 import type { Question } from "../../../types/Question";
 
-import communicationQuestions from "../../../mock-data/basic/communication.json";
-import mathQuestions from "../../../mock-data/basic/math.json";
-import problemSolvingQuestions from "../../../mock-data/basic/solve.json";
-import resourceManagementQuestions from "../../../mock-data/basic/management.json";
-import informationQuestions from "../../../mock-data/basic/information.json";
+import taxAccounting from "../../../mock-data/major/tax-accounting.json";
+import financialInsurance from "../../../mock-data/major/financial-insurance.json";
+import promotionMarketing from "../../../mock-data/major/promotion-marketing.json"
+import humanResource from "../../../mock-data/major/human-resource.json";
+import ITSecure from "../../../mock-data/major/IT-secure.json";
+import manufacturing from "../../../mock-data/major/manufacturing.json"
 
 const subjectTitleMap: Record<number, string> = {
-  1: "의사소통능력",
-  2: "수리능력",
-  3: "문제해결능력",
-  4: "자원관리능력",
-  5: "정보능력",
+  1: "회계·세무",
+  2: "금융·보험",
+  3: "홍보·마케팅",
+  4: "인사·노무",
+  5: "IT·정보보안",
+  6: "생산·제조"
 };
 
 const questionMap: Record<number, Question[]> = {
-  1: communicationQuestions,
-  2: mathQuestions,
-  3: problemSolvingQuestions,
-  4: resourceManagementQuestions,
-  5: informationQuestions,
+  1: taxAccounting,
+  2: financialInsurance,
+  3: promotionMarketing,
+  4: humanResource,
+  5: ITSecure,
+  6: manufacturing
 };
 
-export default function NCSBasicQuestionPage() {
+export default function NCSMajorQuestionPage() {
   const navigate = useNavigate();
   const { subjectId } = useParams();
 
@@ -53,7 +56,7 @@ export default function NCSBasicQuestionPage() {
         <div className="mx-auto max-w-5xl space-y-4">
           <p className="text-slate-500">존재하지 않는 과목입니다.</p>
           <button
-            onClick={() => navigate("/study-ncs/basic")}
+            onClick={() => navigate("/study-ncs/major")}
             className="rounded-xl bg-sky-300 px-4 py-2 text-white"
           >
             목록으로 돌아가기
@@ -69,7 +72,7 @@ export default function NCSBasicQuestionPage() {
     setAnswers(nextAnswers);
   };
 
-  const handleNext = () => {
+   const handleNext = () => {
     if (answers[currentIndex] === null) return;
 
     const isLast = currentIndex === questions.length - 1;
@@ -102,7 +105,7 @@ export default function NCSBasicQuestionPage() {
     const correctCount = results.filter((result) => result.isCorrect).length;
     const score = Math.round((correctCount / questions.length) * 100);
 
-    navigate(`/study-ncs/basic/${parsedSubjectId}/result`, {
+    navigate(`/study-ncs/major/${parsedSubjectId}/result`, {
       state: {
         subjectId: parsedSubjectId,
         subjectTitle,

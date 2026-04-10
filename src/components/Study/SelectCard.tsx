@@ -1,14 +1,4 @@
-import type { ReactNode } from "react";
-
-type NCSSelectCardProps = {
-  icon: ReactNode;
-  title: string;
-  description: string;
-  items: string[];
-  extraText?: string;
-  onClick: () => void;
-  animationDelay?: string;
-};
+import type { SelectCardProps } from "../../types/SelectCardProps";
 
 export default function NCSSelectCard({
   icon,
@@ -18,7 +8,7 @@ export default function NCSSelectCard({
   extraText,
   onClick,
   animationDelay = "0s",
-}: NCSSelectCardProps) {
+}: SelectCardProps) {
   return (
     <article
     className="opacity-0 rounded-2xl border border-slate-200 bg-white p-5 md:p-6 shadow-sm animate-fadein"

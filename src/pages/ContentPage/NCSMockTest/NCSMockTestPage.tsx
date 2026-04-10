@@ -5,20 +5,16 @@ import type { Subject } from "../../../types/Subject";
 import StudyingPageHeader from "../../../components/Study/StudyingPageHeader";
 import StudyCardGrid from "../../../components/Study/StudyCardGrid";
 
-const basicSubjects: Subject[] = [
-    { id: 1, title: "의사소통능력", totalQuestions: 3 },
-    { id: 2, title: "수리능력", totalQuestions: 3 },
-    { id: 3, title: "문제해결능력", totalQuestions: 3 },
-    { id: 4, title: "자원관리능력", totalQuestions: 3 },
-    { id: 5, title: "정보능력", totalQuestions: 3 },
+const majorSubjects: Subject[] = [
+    { id: 1, title: "모의고사1 (10분)", totalQuestions: 10 },
 ];
 
 
-export default function NCSBasicPage() {
+export default function NCSMockTestPage() {
     const navigate = useNavigate();
 
     const handleClickStudy = (subject: Subject) => {
-      navigate(`/study-ncs/basic/${subject.id}`);
+      navigate(`/study-ncs/mock-test/${subject.id}`);
     };
 
     return (
@@ -26,12 +22,12 @@ export default function NCSBasicPage() {
           <div className="mx-auto max-w-7xl space-y-8">
 
               <StudyingPageHeader 
-              title="필수과목 학습"
-              description="NCS 직업기초능력 5개 영역을 과목별로 학습해보세요."
+              title="모의고사"
+              description="모의고사를 통해 실전을 대비해보세요"
               />
 
               <StudyCardGrid
-              subjects={basicSubjects}
+              subjects={majorSubjects}
               onClickStudy={handleClickStudy}
               />
 

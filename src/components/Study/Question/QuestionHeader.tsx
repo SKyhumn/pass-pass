@@ -7,8 +7,17 @@ export default function QuestionHeader({
   subjectTitle,
   currentNumber,
   totalCount,
+  timeLeft,
 }: QuestionHeaderProps) {
   const navigate = useNavigate();
+
+  const formatTime = (seconds: number) => {
+    const minute = Math.floor(seconds / 60);
+    const second = seconds % 60;
+    return `${minute}:${second.toString().padStart(2, "0")}`;
+  };
+
+  const isDanger = timeLeft !== undefined && timeLeft <= 10;
 
   return (
     <section className="space-y-5">
@@ -23,10 +32,20 @@ export default function QuestionHeader({
       <div className="space-y-3">
         <h1 className="text-2xl font-bold">{subjectTitle}</h1>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center justify-between gap-4 pr-16">
           <p className="min-w-fit text-md text-slate-700">
             문제 {currentNumber} / {totalCount}
           </p>
+
+          {timeLeft !== undefined && (
+            <p
+              className={`text-md font-semibold ${
+                isDanger ? "text-red-500" : "text-slate-700"
+              }`}
+            >
+              {formatTime(timeLeft)}
+            </p>
+          )}
         </div>
       </div>
     </section>

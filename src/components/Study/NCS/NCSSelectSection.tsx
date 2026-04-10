@@ -1,13 +1,13 @@
 import { BookOpen, BriefcaseBusiness, FileText } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import NCSSelectCard from "./NCSSelectCard";
+import SelectCard from "../SelectCard";
 
 export default function NCSSelectSection() {
   const navigate = useNavigate();
 
   return (
     <section className="grid grid-cols-1 gap-6 xl:grid-cols-3">
-      <NCSSelectCard
+      <SelectCard
         icon={<BookOpen className="h-10 w-10" />}
         title="필수과목"
         description="10개 필수 능력 학습"
@@ -23,7 +23,7 @@ export default function NCSSelectSection() {
         animationDelay="0.1s"
       />
 
-      <NCSSelectCard
+      <SelectCard
         icon={<BriefcaseBusiness className="h-10 w-10" />}
         title="전공과목"
         description="직무별 전문 지식 학습"
@@ -39,7 +39,7 @@ export default function NCSSelectSection() {
         animationDelay="0.2s"
       />
 
-      <NCSSelectCard
+      <SelectCard
         icon={<FileText className="h-10 w-10" />}
         title="모의고사"
         description="종합 평가 및 실전 연습"
@@ -47,10 +47,9 @@ export default function NCSSelectSection() {
           "실전 형식 모의고사",
           "시간 제한 연습",
           "상세한 결과 분석",
-          "취약점 파악",
           "반복 학습",
         ]}
-        onClick={() => navigate("/study-ncs/mock")}
+        onClick={() => navigate("/study-ncs/mock-test")}
         animationDelay="0.3s"
       />
     </section>

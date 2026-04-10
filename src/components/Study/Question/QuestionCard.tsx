@@ -1,5 +1,5 @@
 import ChoiceItem from "./ChoiceItem";
-import type { QuestionCardProps } from "../../types/QuestionCardProps";
+import type { QuestionCardProps } from "../../../types/QuestionCardProps";
 
 export default function QuestionCard({
   questionNumber,

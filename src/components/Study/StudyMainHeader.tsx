@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
-export default function NCSHeader() {
+import type { StudyHeaderProps } from "../../types/StudyHeaderProps";
+
+export default function StudyHeader({ title, description }: StudyHeaderProps) {
   const navigate = useNavigate();
 
   return (
@@ -17,10 +19,10 @@ export default function NCSHeader() {
       </button>
 
       <h1 className="text-2xl font-bold text-slate-900">
-        NCS 직업기초능력 평가
+        {title}
       </h1>
       <p className="text-md text-slate-500">
-        필수과목, 전공과목, 모의고사를 통해 체계적으로 학습하세요.
+        {description}
       </p>
     </section>
   );
