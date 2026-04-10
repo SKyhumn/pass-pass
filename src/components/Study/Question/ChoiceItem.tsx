@@ -1,10 +1,10 @@
-import type { NCSChoiceItemProps } from "../../../types/NCSChoiceItemProps";
+import type { ChoiceItemProps } from "../../types/ChoiceItemProps";
 
-export default function NCSChoiceItem({
+export default function ChoiceItem({
   text,
   isSelected,
   onClick,
-}: NCSChoiceItemProps) {
+}: ChoiceItemProps) {
   return (
     <button
       type="button"

@@ -1,14 +1,14 @@
-import NCSChoiceItem from "./NCSChoiceItem";
-import type { NCSQuestionCardProps } from "../../../types/NCSQuestionCardProps";
+import ChoiceItem from "./ChoiceItem";
+import type { QuestionCardProps } from "../../types/QuestionCardProps";
 
-export default function NCSQuestionCard({
+export default function QuestionCard({
   questionNumber,
   question,
   selectedIndex,
   onSelectChoice,
   onNext,
   isLastQuestion,
-}: NCSQuestionCardProps) {
+}: QuestionCardProps) {
   return (
     <section className="mx-auto max-w-5xl rounded-[28px] border border-slate-200 bg-white p-8 shadow-sm">
       <div className="space-y-8">
@@ -22,7 +22,7 @@ export default function NCSQuestionCard({
 
         <div className="space-y-4">
           {question.choices.map((choice, index) => (
-            <NCSChoiceItem
+            <ChoiceItem
               key={index}
               text={choice}
               isSelected={selectedIndex === index}

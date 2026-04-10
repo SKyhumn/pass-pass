@@ -1,5 +1,5 @@
-import NCSHeader from "../../components/NCS/NCSHeader";
-import NCSSelectSection from "../../components/NCS/NCSSelectSection";
+import NCSHeader from "../../components/Study/NCS/NCSHeader";
+import NCSSelectSection from "../../components/Study/NCS/NCSSelectSection";
 
 export default function NCSPage() {
     return(

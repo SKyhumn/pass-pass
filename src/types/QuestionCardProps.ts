@@ -1,8 +1,8 @@
-import type { NCSQuestion } from "./NCSQuestion";
+import type { Question } from "./Question";
 
-export type NCSQuestionCardProps = {
+export type QuestionCardProps = {
   questionNumber: number;
-  question: NCSQuestion;
+  question: Question;
   selectedIndex: number | null;
   onSelectChoice: (index: number) => void;
   onNext: () => void;

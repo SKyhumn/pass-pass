@@ -1,5 +1,5 @@
 import type { NCSBasicSubjectGridProps } from "../../../types/NCSBasicSubjectGridProps";
-import NCSBasicSubjectCard from "./NCSBasicSubjectCard";
+import NCSBasicSubjectCard from "../../StudyCard";
 
 
 export default function NCSBasicSubjectGrid({

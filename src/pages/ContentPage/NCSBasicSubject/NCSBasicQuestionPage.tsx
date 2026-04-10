@@ -1,10 +1,10 @@
 import { useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import NCSQuestionHeader from "../../../components/NCS/NCSQuestion/NCSQuestionHeader";
-import NCSQuestionCard from "../../../components/NCS/NCSQuestion/NCSQuestionCard";
+import QuestionHeader from "../../../components/Study/Question/QuestionHeader";
+import QuestionCard from "../../../components/Study/Question/QuestionCard";
 
-import type { NCSQuestion } from "../../../types/NCSQuestion";
+import type { Question } from "../../../types/Question";
 
 import communicationQuestions from "../../../mock-data/basic/communication.json";
 import mathQuestions from "../../../mock-data/basic/math.json";
@@ -20,7 +20,7 @@ const subjectTitleMap: Record<number, string> = {
   5: "정보능력",
 };
 
-const questionMap: Record<number, NCSQuestion[]> = {
+const questionMap: Record<number, Question[]> = {
   1: communicationQuestions,
   2: mathQuestions,
   3: problemSolvingQuestions,
@@ -98,13 +98,13 @@ export default function NCSQuestionPage() {
   return (
     <div className="p-6 md:p-8">
       <div className="mx-auto max-w-6xl space-y-10">
-        <NCSQuestionHeader
+        <QuestionHeader
           subjectTitle={subjectTitle}
           currentNumber={currentIndex + 1}
           totalCount={questions.length}
         />
 
-        <NCSQuestionCard
+        <QuestionCard
           questionNumber={currentIndex + 1}
           question={currentQuestion}
           selectedIndex={answers[currentIndex]}

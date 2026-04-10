@@ -1,4 +1,4 @@
-export type NCSQuestionHeaderProps = {
+export type QuestionHeaderProps = {
   subjectTitle: string;
   currentNumber: number;
   totalCount: number;

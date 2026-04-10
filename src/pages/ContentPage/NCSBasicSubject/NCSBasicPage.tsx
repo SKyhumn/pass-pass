@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 
-import type { NCSBasicSubject } from "../../../types/NCSBasicSubject";
+import type { Subject } from "../../../types/Subject";
 
-import NCSBasicHeader from "../../../components/NCS/NCSBasic/NCSBasicHeader";
-import NCSBasicSubjectGrid from "../../../components/NCS/NCSBasic/NCSBasicSubjectGrid";
+import NCSBasicHeader from "../../../components/Study/NCS/NCSBasic/NCSBasicHeader";
+import StudyCardGrid from "../../../components/Study/StudyCardGrid";
 
-const basicSubjects: NCSBasicSubject[] = [
+const basicSubjects: Subject[] = [
   { id: 1, title: "의사소통능력", totalQuestions: 3 },
   { id: 2, title: "수리능력", totalQuestions: 3 },
   { id: 3, title: "문제해결능력", totalQuestions: 3 },
@@ -17,7 +17,7 @@ const basicSubjects: NCSBasicSubject[] = [
 export default function NCSBasicPage() {
     const navigate = useNavigate();
 
-  const handleClickStudy = (subject: NCSBasicSubject) => {
+  const handleClickStudy = (subject: Subject) => {
     navigate(`/study-ncs/basic/${subject.id}`);
   };
 
@@ -25,7 +25,7 @@ export default function NCSBasicPage() {
     <div className="p-6 md:p-8">
       <div className="mx-auto max-w-7xl space-y-8">
         <NCSBasicHeader/>
-        <NCSBasicSubjectGrid
+        <StudyCardGrid
           subjects={basicSubjects}
           onClickStudy={handleClickStudy}
         />

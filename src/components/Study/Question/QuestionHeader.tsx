@@ -1,22 +1,20 @@
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-import type { NCSQuestionHeaderProps } from "../../../types/NCSQuestionHeaderProps.ts";
+import type { QuestionHeaderProps } from "../../../types/QuestionHeaderProps";
 
-import NCSProgressBar from "./NCSProgressBar.tsx";
-
-export default function NCSQuestionHeader({
+export default function QuestionHeader({
   subjectTitle,
   currentNumber,
   totalCount,
-}: NCSQuestionHeaderProps) {
+}: QuestionHeaderProps) {
   const navigate = useNavigate();
 
   return (
     <section className="space-y-5">
       <button
         onClick={() => navigate(-1)}
-        className="inline-flex items-center gap-2 rounded-md px-1 py-1 text-sm text-slate-700 transition hover:text-sky-500"
+        className="inline-flex items-center gap-2 rounded-md px-1 py-1 text-sm text-slate-500 transition hover:text-slate-700"
       >
         <ArrowLeft className="h-4 w-4" />
         돌아가기
@@ -29,7 +27,6 @@ export default function NCSQuestionHeader({
           <p className="min-w-fit text-md text-slate-700">
             문제 {currentNumber} / {totalCount}
           </p>
-          <NCSProgressBar current={currentNumber} total={totalCount} />
         </div>
       </div>
     </section>

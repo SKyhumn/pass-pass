@@ -1,9 +1,9 @@
-import type { NCSBasicSubjectCardProps } from "../../../types/NCSBasicSubjectCardProps";
+import type { StudyCardProps } from "../../types/StudyCardProps";
 
-export default function NCSBasicSubjectCard({
+export default function StudyCard({
   subject,
   onClickStudy,
-}: NCSBasicSubjectCardProps) {
+}: StudyCardProps) {
   return (
     <article className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
       <h2 className="text-[20px] font-bold text-slate-900">{subject.title}</h2>
