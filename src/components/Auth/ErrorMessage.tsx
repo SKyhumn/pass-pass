@@ -1,4 +1,4 @@
-import type { ErrorMessageProps } from "../../types/ErrorMEssageProps";
+import type { ErrorMessageProps } from "../../types/ErrorMessageProps";
 
 import errorIcon from "../../assets/error.png";
 
