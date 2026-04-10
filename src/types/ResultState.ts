@@ -7,4 +7,6 @@ export type ResultState = {
   correctCount: number;
   score: number;
   results: QuestionResult[];
+  retryPath: string;
+  mainPath: string;
 };

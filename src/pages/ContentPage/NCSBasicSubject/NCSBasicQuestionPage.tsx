@@ -110,6 +110,8 @@ export default function NCSBasicQuestionPage() {
         correctCount,
         score,
         results,
+        retryPath: `/study-ncs/basic/${parsedSubjectId}`,
+        mainPath: "/study-ncs",
       },
     });
   };
@@ -121,6 +123,7 @@ export default function NCSBasicQuestionPage() {
           subjectTitle={subjectTitle}
           currentNumber={currentIndex + 1}
           totalCount={questions.length}
+          backPath="/study-ncs/basic"
         />
 
         <QuestionCard

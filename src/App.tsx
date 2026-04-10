@@ -92,6 +92,13 @@ function App() {
             <Route path="/study-certification/manufacturing" element={<CertificationManufacturingPage/>}/>
             <Route path="/study-certification/manufacturing/:subjectId" element={<CertificationManufacturingQuestionPage/>}/>
 
+            <Route path="/study-certification/accounting/:subjectId/result" element={<ResultPage/>}/>
+            <Route path="/study-certification/finance/:subjectId/result" element={<ResultPage/>}/>
+            <Route path="/study-certification/officer/:subjectId/result" element={<ResultPage/>}/>
+            <Route path="/study-certification/hr/:subjectId/result" element={<ResultPage/>}/>
+            <Route path="/study-certification/it/:subjectId/result" element={<ResultPage/>}/>
+            <Route path="/study-certification/manufacturing/:subjectId/result" element={<ResultPage/>}/>
+
             <Route path="/make-schedule" element={<SchedulePage/>}/>
           </Route>
         </Routes>

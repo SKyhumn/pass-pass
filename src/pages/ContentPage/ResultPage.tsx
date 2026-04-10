@@ -42,11 +42,8 @@ export default function ResultPage() {
 
         {/* 버튼 */}
         <ResultActionButtons
-          subjectId={result.subjectId}
-          onRetry={() =>
-            navigate(`/study-ncs/basic/${result.subjectId}`)
-          }
-          onGoMain={() => navigate("/study-ncs")}
+          onRetry={() => navigate(result.retryPath)}
+          onGoMain={() => navigate(result.mainPath)}
         />
       </div>
     </div>

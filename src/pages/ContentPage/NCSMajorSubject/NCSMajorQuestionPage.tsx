@@ -113,6 +113,8 @@ export default function NCSMajorQuestionPage() {
         correctCount,
         score,
         results,
+        retryPath: `/study-ncs/major/${parsedSubjectId}`,
+        mainPath: "/study-ncs",
       },
     });
   };
@@ -124,6 +126,7 @@ export default function NCSMajorQuestionPage() {
           subjectTitle={subjectTitle}
           currentNumber={currentIndex + 1}
           totalCount={questions.length}
+          backPath="/study-ncs/major"
         />
 
         <QuestionCard

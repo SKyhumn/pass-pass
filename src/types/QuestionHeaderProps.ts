@@ -3,4 +3,5 @@ export type QuestionHeaderProps = {
   currentNumber: number;
   totalCount: number;
   timeLeft?: number;
+  backPath: string;
 };

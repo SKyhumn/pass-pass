@@ -126,7 +126,7 @@ export default function CertificationOfficerQuestionPage() {
     const correctCount = results.filter((r) => r.isCorrect).length;
     const score = Math.round((correctCount / questions.length) * 100);
 
-    navigate(`/study-ncs/mock-test/${parsedSubjectId}/result`, {
+    navigate(`/study-certification/officer/${parsedSubjectId}/result`, {
       state: {
         subjectId: parsedSubjectId,
         subjectTitle,
@@ -134,6 +134,8 @@ export default function CertificationOfficerQuestionPage() {
         correctCount,
         score,
         results,
+        retryPath: `/study-certification/officer/${parsedSubjectId}`,
+        mainPath: "/study-certification"
       },
     });
   };
@@ -152,6 +154,7 @@ export default function CertificationOfficerQuestionPage() {
           currentNumber={currentIndex + 1}
           totalCount={questions.length}
           timeLeft={timeLeft}
+          backPath="/study-certification/officer"
         />
 
         <QuestionCard

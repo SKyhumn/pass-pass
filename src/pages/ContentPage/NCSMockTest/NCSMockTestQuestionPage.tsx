@@ -128,6 +128,8 @@ export default function NCSMockTestQuestionPage() {
         correctCount,
         score,
         results,
+        retryPath: `/study-ncs/mock-test/${parsedSubjectId}`,
+        mainPath: "/study-ncs",
       },
     });
   };
@@ -146,6 +148,7 @@ export default function NCSMockTestQuestionPage() {
           currentNumber={currentIndex + 1}
           totalCount={questions.length}
           timeLeft={timeLeft}
+          backPath="/study-ncs/mock-test"
         />
 
         <QuestionCard

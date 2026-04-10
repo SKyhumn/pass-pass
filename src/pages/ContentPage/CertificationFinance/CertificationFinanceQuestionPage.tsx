@@ -126,7 +126,7 @@ export default function CertificationFinanceQuestionPage() {
     const correctCount = results.filter((r) => r.isCorrect).length;
     const score = Math.round((correctCount / questions.length) * 100);
 
-    navigate(`/study-ncs/mock-test/${parsedSubjectId}/result`, {
+    navigate(`/study-certification/finance/${parsedSubjectId}/result`, {
       state: {
         subjectId: parsedSubjectId,
         subjectTitle,
@@ -134,6 +134,8 @@ export default function CertificationFinanceQuestionPage() {
         correctCount,
         score,
         results,
+        retryPath: `/study-certification/finance/${parsedSubjectId}`,
+        mainPath: "/study-certification"
       },
     });
   };
@@ -152,6 +154,7 @@ export default function CertificationFinanceQuestionPage() {
           currentNumber={currentIndex + 1}
           totalCount={questions.length}
           timeLeft={timeLeft}
+          backPath="/study-certification/finance"
         />
 
         <QuestionCard

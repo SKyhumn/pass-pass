@@ -8,6 +8,7 @@ export default function QuestionHeader({
   currentNumber,
   totalCount,
   timeLeft,
+  backPath
 }: QuestionHeaderProps) {
   const navigate = useNavigate();
 
@@ -22,7 +23,7 @@ export default function QuestionHeader({
   return (
     <section className="space-y-5">
       <button
-        onClick={() => navigate(-1)}
+        onClick={() => navigate(backPath)}
         className="inline-flex items-center gap-2 rounded-md px-1 py-1 text-sm text-slate-500 transition hover:text-slate-700"
       >
         <ArrowLeft className="h-4 w-4" />
