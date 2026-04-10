@@ -6,9 +6,9 @@ import StudyingPageHeader from "../../../components/Study/StudyingPageHeader";
 import StudyCardGrid from "../../../components/Study/StudyCardGrid";
 
 const majorSubjects: Subject[] = [
-    { id: 1, title: "정보처리기사", totalQuestions: 10 },
-    { id: 2, title: "SQLD", totalQuestions: 10 },
-    { id: 3, title: "정보보안기사", totalQuestions: 10 },
+    { id: 1, title: "정보처리기사", totalQuestions: 2 },
+    { id: 2, title: "SQLD", totalQuestions: 2 },
+    { id: 3, title: "정보보안기사", totalQuestions: 2 },
 ];
 
 export default function CertificationITPage() {

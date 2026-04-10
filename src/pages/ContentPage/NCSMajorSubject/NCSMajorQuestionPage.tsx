@@ -6,12 +6,12 @@ import QuestionCard from "../../../components/Study/Question/QuestionCard";
 
 import type { Question } from "../../../types/Question";
 
-import taxAccounting from "../../../mock-data/major/tax-accounting.json";
-import financialInsurance from "../../../mock-data/major/financial-insurance.json";
-import office from "../../../mock-data/major/office.json"
-import humanResource from "../../../mock-data/major/human-resource.json";
-import ITSecure from "../../../mock-data/major/IT-secure.json";
-import manufacturing from "../../../mock-data/major/manufacturing.json"
+import taxAccounting from "../../../mock-data/NCS/major/tax-accounting.json";
+import financialInsurance from "../../../mock-data/NCS/major/financial-insurance.json";
+import office from "../../../mock-data/NCS/major/office.json"
+import humanResource from "../../../mock-data/NCS/major/human-resource.json";
+import ITSecure from "../../../mock-data/NCS/major/IT-secure.json";
+import manufacturing from "../../../mock-data/NCS/major/manufacturing.json"
 
 const subjectTitleMap: Record<number, string> = {
   1: "회계·세무",

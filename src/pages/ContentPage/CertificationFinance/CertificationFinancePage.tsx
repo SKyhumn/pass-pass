@@ -6,9 +6,9 @@ import StudyingPageHeader from "../../../components/Study/StudyingPageHeader";
 import StudyCardGrid from "../../../components/Study/StudyCardGrid";
 
 const majorSubjects: Subject[] = [
-    { id: 1, title: "투자자산운용자", totalQuestions: 10 },
-    { id: 2, title: "AFPK", totalQuestions: 10 },
-    { id: 3, title: "은행FP", totalQuestions: 10 },
+    { id: 1, title: "투자자산운용사", totalQuestions: 2 },
+    { id: 2, title: "AFPK", totalQuestions: 2 },
+    { id: 3, title: "은행FP", totalQuestions: 2 },
 ];
 
 export default function CertificationFinancePage() {

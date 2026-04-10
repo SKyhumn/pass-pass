@@ -6,9 +6,9 @@ import StudyingPageHeader from "../../../components/Study/StudyingPageHeader";
 import StudyCardGrid from "../../../components/Study/StudyCardGrid";
 
 const majorSubjects: Subject[] = [
-    { id: 1, title: "공인노무사", totalQuestions: 10 },
-    { id: 2, title: "HRM 전문가", totalQuestions: 10 },
-    { id: 3, title: "ERP 인사 1급", totalQuestions: 10 },
+    { id: 1, title: "공인노무사", totalQuestions: 2 },
+    { id: 2, title: "HRM 전문가", totalQuestions: 2 },
+    { id: 3, title: "ERP 인사 1급", totalQuestions: 2 },
 ];
 
 export default function CertificationHrPage() {

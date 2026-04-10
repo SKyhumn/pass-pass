@@ -6,11 +6,11 @@ import QuestionCard from "../../../components/Study/Question/QuestionCard";
 
 import type { Question } from "../../../types/Question";
 
-import communicationQuestions from "../../../mock-data/basic/communication.json";
-import mathQuestions from "../../../mock-data/basic/math.json";
-import problemSolvingQuestions from "../../../mock-data/basic/solve.json";
-import resourceManagementQuestions from "../../../mock-data/basic/management.json";
-import informationQuestions from "../../../mock-data/basic/information.json";
+import communicationQuestions from "../../../mock-data/NCS/basic/communication.json";
+import mathQuestions from "../../../mock-data/NCS/basic/math.json";
+import problemSolvingQuestions from "../../../mock-data/NCS/basic/solve.json";
+import resourceManagementQuestions from "../../../mock-data/NCS/basic/management.json";
+import informationQuestions from "../../../mock-data/NCS/basic/information.json";
 
 const subjectTitleMap: Record<number, string> = {
   1: "의사소통능력",

@@ -6,9 +6,9 @@ import StudyingPageHeader from "../../../components/Study/StudyingPageHeader";
 import StudyCardGrid from "../../../components/Study/StudyCardGrid";
 
 const majorSubjects: Subject[] = [
-    { id: 1, title: "전산회계 1급", totalQuestions: 10 },
-    { id: 2, title: "전산세무 1급", totalQuestions: 10 },
-    { id: 3, title: "재경관리사", totalQuestions: 10 },
+    { id: 1, title: "전산회계 1급", totalQuestions: 2 },
+    { id: 2, title: "전산세무 1급", totalQuestions: 2 },
+    { id: 3, title: "재경관리사", totalQuestions: 2 },
 ];
 
 export default function CertificationAccountingPage() {

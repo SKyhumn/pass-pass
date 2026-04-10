@@ -7,7 +7,7 @@ import QuestionHeader from "../../../components/Study/Question/QuestionHeader";
 import QuestionCard from "../../../components/Study/Question/QuestionCard";
 import Modal from "../../../components/Modals/Modal";
 
-import mockTest from "../../../mock-data/mock-test/mock-test.json";
+import mockTest from "../../../mock-data/NCS/mock-test/mock-test.json";
 
 const subjectTitleMap: Record<number, string> = {
   1: "모의고사1",

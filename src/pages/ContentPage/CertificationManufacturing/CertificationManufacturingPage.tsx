@@ -6,9 +6,9 @@ import StudyingPageHeader from "../../../components/Study/StudyingPageHeader";
 import StudyCardGrid from "../../../components/Study/StudyCardGrid";
 
 const majorSubjects: Subject[] = [
-    { id: 1, title: "품질경영기사", totalQuestions: 10 },
-    { id: 2, title: "산업안전기사", totalQuestions: 10 },
-    { id: 3, title: "생산자동화산업기사", totalQuestions: 10 },
+    { id: 1, title: "품질경영기사", totalQuestions: 2 },
+    { id: 2, title: "산업안전기사", totalQuestions: 2 },
+    { id: 3, title: "생산자동화산업기사", totalQuestions: 2 },
 ];
 
 export default function CertificationManufacturingPage() {
