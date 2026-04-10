@@ -8,6 +8,8 @@
 
 체계적인 학습 경험을 제공합니다.
 
+링크: https://pass-pass-viym.vercel.app/welcome
+
 ## 💡 기획 배경
 
 공기업 취업 준비 과정에서는 NCS와 자격증 준비가 동시에 요구됩니다.
