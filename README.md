@@ -8,7 +8,7 @@
 
 체계적인 학습 경험을 제공합니다.
 
-링크: https://pass-pass-viym.vercel.app/welcome
+링크: [https://pass-pass-viym.vercel.app/welcome](https://pass-pass-nnf41t4xi-skyhumns-projects.vercel.app/welcome)
 
 ## 💡 기획 배경
 
