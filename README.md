@@ -105,7 +105,7 @@ NCS / 자격증 선택 => 과목 선택 => 문제 풀이 => 결과 확인
 ### 1. 결과 페이지 경로 문제
 
 - 문제: NCS와 자격증 결과 이동 경로 충돌
-- 해결: `ResultState`에 경로를 포함하여 공용 처리
+- 해결: 결과 상태 `ResultState`에 `retryPath`, `mainPath`를 포함하여 공용 처리
   
 ### 2. 뒤로가기 UX 문제
 
@@ -115,7 +115,7 @@ NCS / 자격증 선택 => 과목 선택 => 문제 풀이 => 결과 확인
 ### 3. 공용 컴포넌트 설계
 
 - 문제: 기능별 코드 중복 발생
-- 해결: Result 컴포넌트 공용화
+- 해결: `Result`, `StudyCard`등 컴포넌트 공용화
 
 ## 🎯 기대 효과
 - NCS + 자격증 통합 학습 가능
@@ -128,3 +128,33 @@ NCS / 자격증 선택 => 과목 선택 => 문제 풀이 => 결과 확인
 - 사용자 학습 데이터(정답률, 문제 풀이 기록) 저장 및 분석 기능 추가
 - NCS 과목, 직무 수, 직무 관련 자격증 문제 추가
 - 실제 공기업 시험 환경 확인 후 학습 환경 변경
+
+## 🔥 Firebase 설정
+
+본 프로젝트는 Firebase를 사용하고 있으며,
+
+보안상 Firebase 설정 값은 GitHub에 포함되어 있지 않습니다.
+
+프로젝트를 실행하려면 루트 경로에 .env 파일을 생성하고
+
+아래 환경 변수를 설정해야 합니다.
+
+```
+🔑 환경 변수 설정 (.env)
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+```
+
+.env 파일은 보안상 Git에 포함되어 있지 않습니다.
+필요 시 .env.example 파일을 참고하여 설정해주세요.
+
+## ▶ 실행 방법
+
+```
+npm install
+npm run dev
+```
