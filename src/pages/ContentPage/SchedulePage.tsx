@@ -13,6 +13,7 @@ import {
 } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 
+import type { User } from "firebase/auth";
 import type { ScheduleItem } from "../../types/ScheduleItem";
 
 import ScheduleSummaryCards from "../../components/Schedule/ScheduleSummaryCards";
@@ -24,16 +25,18 @@ import ScheduleSection from "../../components/Schedule/ScheduleSection";
 import Modal from "../../components/Modals/Modal";
 
 export default function SchedulePage() {
-  const [showForm, setShowForm] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [user, setUser] = useState<User | null>(null);
+  const [authLoading, setAuthLoading] = useState(true);
 
-  const [title, setTitle] = useState<string>("");
-  const [date, setDate] = useState<string>("");
-  const [time, setTime] = useState<string>("");
-  const [description, setDescription] = useState<string>("");
+  const [showForm, setShowForm] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const [title, setTitle] = useState("");
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const [description, setDescription] = useState("");
 
   const [schedules, setSchedules] = useState<ScheduleItem[]>([]);
-  const [authLoading, setAuthLoading] = useState<boolean>(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const resetForm = () => {
@@ -47,6 +50,8 @@ export default function SchedulePage() {
     let unsubscribeSnapshot: (() => void) | undefined;
 
     const unsubscribeAuth = onAuthStateChanged(auth, (user) => {
+      setUser(user);
+
       if (!user) {
         setSchedules([]);
         setAuthLoading(false);
@@ -76,7 +81,6 @@ export default function SchedulePage() {
   }, []);
 
   const handleAddSchedule = async () => {
-    const user = auth.currentUser;
     if (!user) return;
     if (!title.trim() || !date.trim() || !time.trim()) return;
 
@@ -102,7 +106,6 @@ export default function SchedulePage() {
   };
 
   const handleDeleteSchedule = async (scheduleId: string) => {
-    const user = auth.currentUser;
     if (!user) return;
 
     try {
@@ -116,7 +119,6 @@ export default function SchedulePage() {
     scheduleId: string,
     currentValue: boolean
   ) => {
-    const user = auth.currentUser;
     if (!user) return;
 
     try {
@@ -130,6 +132,24 @@ export default function SchedulePage() {
 
   const inProgressSchedules = schedules.filter((item) => !item.completed);
   const completedSchedules = schedules.filter((item) => item.completed);
+
+  // ✅ 1. 인증 로딩 상태
+  if (authLoading) {
+    return (
+      <div className="p-6 text-center text-slate-500">
+        🔄 일정 불러오는 중...
+      </div>
+    );
+  }
+
+  // ✅ 2. 비로그인 상태
+  if (!user) {
+    return (
+      <div className="p-6 text-center text-slate-500">
+        로그인 후 이용해주세요.
+      </div>
+    );
+  }
 
   return (
     <div className="p-4 md:p-6 space-y-6">
@@ -159,6 +179,7 @@ export default function SchedulePage() {
         />
       )}
 
+      {/* ✅ 3. 데이터 없음 */}
       {schedules.length === 0 ? (
         <ScheduleEmptyView />
       ) : (
