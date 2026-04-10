@@ -8,7 +8,7 @@ import type { Question } from "../../../types/Question";
 
 import taxAccounting from "../../../mock-data/major/tax-accounting.json";
 import financialInsurance from "../../../mock-data/major/financial-insurance.json";
-import promotionMarketing from "../../../mock-data/major/promotion-marketing.json"
+import office from "../../../mock-data/major/office.json"
 import humanResource from "../../../mock-data/major/human-resource.json";
 import ITSecure from "../../../mock-data/major/IT-secure.json";
 import manufacturing from "../../../mock-data/major/manufacturing.json"
@@ -25,7 +25,7 @@ const subjectTitleMap: Record<number, string> = {
 const questionMap: Record<number, Question[]> = {
   1: taxAccounting,
   2: financialInsurance,
-  3: promotionMarketing,
+  3: office,
   4: humanResource,
   5: ITSecure,
   6: manufacturing

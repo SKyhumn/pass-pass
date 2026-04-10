@@ -11,7 +11,7 @@ export default function StudyHeader({ title, description }: StudyHeaderProps) {
 
       {/* 뒤로가기 */}
       <button
-        onClick={() => navigate(-1)}
+        onClick={() => navigate("/main")}
         className="flex items-center gap-2 text-sm text-slate-500 cursor-pointer hover:text-slate-700 transition"
       >
         <ArrowLeft className="w-4 h-4" />

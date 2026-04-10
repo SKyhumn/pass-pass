@@ -20,6 +20,12 @@ import NCSMockTestPage from "./pages/ContentPage/NCSMockTest/NCSMockTestPage";
 import NCSMockTestQuestionPage from "./pages/ContentPage/NCSMockTest/NCSMockTestQuestionPage";
 
 import CertificationPage from "./pages/ContentPage/CertificationPage";
+import CertificationAccountingPage from "./pages/ContentPage/CertificationAccounting/CertificationAccountingPage";
+import CertificationFinancePage from "./pages/ContentPage/CertificationFinance/CertificationFinancePage";
+import CertificationOfficerPage from "./pages/ContentPage/CertificationOfficer/CertificationOfficerPage";
+import CertificationHrPage from "./pages/ContentPage/CertificationHr/CertificationHrPage";
+import CertificationITPage from "./pages/ContentPage/CertificationIT/CertificationITPage";
+import CertificationManufacturingPage from "./pages/ContentPage/CertificationManufacturing/CertificationManufacturingPage";
 
 import SchedulePage from "./pages/ContentPage/SchedulePage";
 
@@ -51,12 +57,17 @@ function App() {
             <Route path="/study-ncs/mock-test/:subjectId" element={<NCSMockTestQuestionPage/>}/>
 
             <Route path="/study-ncs/basic/:subjectId/result" element={<ResultPage/>}/>
-
             <Route path="/study-ncs/major/:subjectId/result" element={<ResultPage/>}/>
-
             <Route path="/study-ncs/mock-test/:subjectId/result" element={<ResultPage/>}/>
 
             <Route path="/study-certification" element={<CertificationPage/>}/>
+
+            <Route path="/study-certification/accounting" element={<CertificationAccountingPage/>}/>
+            <Route path="/study-certification/finance" element={<CertificationFinancePage/>}/>
+            <Route path="/study-certification/officer" element={<CertificationOfficerPage/>}/>
+            <Route path="/study-certification/hr" element={<CertificationHrPage/>}/>
+            <Route path="/study-certification/it" element={<CertificationITPage/>}/>
+            <Route path="/study-certification/manufacturing" element={<CertificationManufacturingPage/>}/>
 
             <Route path="/make-schedule" element={<SchedulePage/>}/>
           </Route>

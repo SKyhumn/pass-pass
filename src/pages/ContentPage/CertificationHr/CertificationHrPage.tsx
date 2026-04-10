@@ -6,20 +6,16 @@ import StudyingPageHeader from "../../../components/Study/StudyingPageHeader";
 import StudyCardGrid from "../../../components/Study/StudyCardGrid";
 
 const majorSubjects: Subject[] = [
-    { id: 1, title: "회계·세무", totalQuestions: 3 },
-    { id: 2, title: "금융·보험", totalQuestions: 3 },
-    { id: 3, title: "사무·행정", totalQuestions: 3 },
-    { id: 4, title: "인사·노무", totalQuestions: 3 },
-    { id: 5, title: "IT·정보보안", totalQuestions: 3 },
-    { id: 6, title: "생산·제조", totalQuestions: 3 },
+    { id: 1, title: "공인노무사", totalQuestions: 10 },
+    { id: 2, title: "HRM 전문가", totalQuestions: 10 },
+    { id: 3, title: "ERP 인사 1급", totalQuestions: 10 },
 ];
 
-
-export default function NCSMajorPage() {
+export default function CertificationHrPage() {
     const navigate = useNavigate();
 
     const handleClickStudy = (subject: Subject) => {
-      navigate(`/study-ncs/major/${subject.id}`);
+      navigate(`/study-certification/hr/${subject.id}`);
     };
 
     return (
@@ -27,8 +23,8 @@ export default function NCSMajorPage() {
           <div className="mx-auto max-w-7xl space-y-8">
 
               <StudyingPageHeader 
-              title="전공과목 학습"
-              description="직무별 전문 지식을 학습하세요."
+              title="인사·노무"
+              description="문제 풀이로 자격증 공부를 시작해 보아요."
               />
 
               <StudyCardGrid
