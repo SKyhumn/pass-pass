@@ -8,7 +8,7 @@
         "SELECT",
         "DELETE"
       ],
-      "answer": 2,
+      "answer": 3,
       "explanation": "SELECT는 데이터 조회를 위한 SQL 명령어이다."
     },
     {
@@ -20,7 +20,7 @@
         "유일성과 NOT NULL",
         "외래키 역할"
       ],
-      "answer": 2,
+      "answer": 3,
       "explanation": "기본키는 각 행을 유일하게 식별하며 NULL 값을 가질 수 없다."
     }
 ]

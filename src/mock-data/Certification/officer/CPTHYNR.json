@@ -8,7 +8,7 @@
         "SUMIF",
         "AVERAGE"
       ],
-      "answer": 2,
+      "answer": 3,
       "explanation": "SUMIF 함수는 특정 조건을 만족하는 값들의 합계를 구할 때 사용된다."
     },
     {
@@ -20,7 +20,7 @@
         "행과 열 모두 고정",
         "상대 참조"
       ],
-      "answer": 2,
+      "answer": 3,
       "explanation": "$A$1은 행과 열이 모두 고정된 절대참조를 의미한다."
     }
 ]
