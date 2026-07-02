@@ -23,7 +23,7 @@
 
 ## 🚀 주요 기능
 
-- 메인 화면
+- **메인 화면**
   
   ![메인 화면](./src/assets/readme/스크린샷4.png)
 
@@ -32,38 +32,23 @@
   - 일정 편성
   - 로그아웃
 
-- NCS 풀이
+- **NCS 풀이**
   
   [![영상 썸네일](./src/assets/readme/thumnail.png)](./src/assets/readme/video1.mp4)
 
-- 자격증 풀이
+- **자격증 풀이**
   
   [![영상 썸네일](./src/assets/readme/thumnail2.png)](./src/assets/readme/video1.mp4)
 
-- 일절 편성
+- **일정 편성**
 
   [![영상 썸네일](./src/assets/readme/thumnail3.png)](./src/assets/readme/video3.mp4)
 
-- 로그인
+- **인증**
   
-  ![로그인 화면](./src/assets/readme/스크린샷1.png)
-
-  - 이메일 로그인
-  
-- 회원가입
-
-  ![회원가입 화면](./src/assets/readme/스크린샷2.png)
-
-  - 이름
-  - 이메일
-  - 비밀번호
-  - 비밀번호 확인
-  
-- 비밀번호 재설정
-  
-  ![비밀번호 재설정](./src/assets/readme/스크린샷3.png)
-
-  - 자신의 이메일로 비밀번호 재설정 메일 발송
+  - 로그인: 이메일 로그인
+  - 회원가입: 이름 / 이메일 / 비밀번호 / 비밀번호 확인
+  - 비밀번호 재설정: 이메일로 재설정 메일 발송
   
 ## 🧭 서비스 흐름
 
